@@ -4,13 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hello Madam Pretty 🌷</title>
+
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; min-height: 100%; font-family: "Poppins", Arial, sans-serif; }
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: "Poppins", Arial, sans-serif;
+  }
+
   body {
     background: linear-gradient(135deg, #ffd1e3, #f8a9c4);
     overflow-x: hidden;
   }
+
   .page {
     min-height: 100vh;
     display: none;
@@ -19,19 +29,43 @@
     padding: 28px 18px;
     position: relative;
   }
-  .page.active { display: flex; }
 
+  .page.active {
+    display: flex;
+  }
+
+  /* Floating hearts */
   .hearts span {
     position: absolute;
     color: rgba(255,255,255,.65);
     font-size: 22px;
     animation: float 5s infinite ease-in-out;
   }
-  .hearts span:nth-child(1){left:8%;top:15%}
-  .hearts span:nth-child(2){right:10%;top:24%;animation-delay:1s}
-  .hearts span:nth-child(3){left:18%;bottom:18%;animation-delay:2s}
-  .hearts span:nth-child(4){right:20%;bottom:12%;animation-delay:3s}
 
+  .hearts span:nth-child(1) {
+    left: 8%;
+    top: 15%;
+  }
+
+  .hearts span:nth-child(2) {
+    right: 10%;
+    top: 24%;
+    animation-delay: 1s;
+  }
+
+  .hearts span:nth-child(3) {
+    left: 18%;
+    bottom: 18%;
+    animation-delay: 2s;
+  }
+
+  .hearts span:nth-child(4) {
+    right: 20%;
+    bottom: 12%;
+    animation-delay: 3s;
+  }
+
+  /* Page 1 */
   .card {
     width: min(92vw, 650px);
     text-align: center;
@@ -42,12 +76,19 @@
     padding: 45px 28px;
     backdrop-filter: blur(8px);
   }
+
   h1 {
     margin: 0 0 12px;
     color: #9e315d;
     font-size: clamp(34px, 8vw, 62px);
   }
-  .subtitle { color: #8c4662; font-size: 17px; margin-bottom: 28px; }
+
+  .subtitle {
+    color: #8c4662;
+    font-size: 17px;
+    margin-bottom: 28px;
+  }
+
   button {
     border: 0;
     border-radius: 999px;
@@ -60,15 +101,25 @@
     box-shadow: 0 8px 18px rgba(190, 54, 108, .25);
     transition: transform .2s, background .2s;
   }
-  button:hover { transform: translateY(-2px) scale(1.03); background: #d9477f; }
 
-  .letter-wrap { width: min(94vw, 720px); position: relative; }
+  button:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: #d9477f;
+  }
+
+  /* Page 2 */
+  .letter-wrap {
+    width: min(94vw, 720px);
+    position: relative;
+  }
+
   .flowers {
     text-align: center;
     font-size: clamp(35px, 8vw, 55px);
     margin-bottom: 10px;
     letter-spacing: 8px;
   }
+
   .letter {
     background: #fffdfb;
     color: #65404d;
@@ -80,6 +131,7 @@
     line-height: 1.8;
     font-size: clamp(16px, 2.6vw, 19px);
   }
+
   .letter:before {
     content: "";
     position: absolute;
@@ -88,19 +140,31 @@
     border-radius: 8px;
     pointer-events: none;
   }
-  .letter p { position: relative; z-index: 1; margin: 0; }
+
+  .letter p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
   .back {
     display: block;
     margin: 24px auto 0;
     background: #a94770;
   }
 
-
+  /* Page 3 */
   .page3 {
-    background: linear-gradient(135deg, #ffb6d5, #f78fbd, #ffd1e3);
+    background: linear-gradient(
+      135deg,
+      #ffb6d5,
+      #f78fbd,
+      #ffd1e3
+    );
     overflow: hidden;
   }
 
+  /* Floating cute decorations */
   .flower {
     position: absolute;
     font-size: clamp(28px, 6vw, 55px);
@@ -108,13 +172,61 @@
     user-select: none;
   }
 
-  .flower:nth-child(1) { left: 6%; top: 12%; animation-delay: .2s; }
-  .flower:nth-child(2) { right: 8%; top: 15%; animation-delay: 1s; }
-  .flower:nth-child(3) { left: 12%; bottom: 16%; animation-delay: 1.8s; }
-  .flower:nth-child(4) { right: 12%; bottom: 12%; animation-delay: 2.6s; }
-  .flower:nth-child(5) { left: 42%; top: 7%; animation-delay: 3.2s; }
-  .flower:nth-child(6) { right: 38%; bottom: 8%; animation-delay: 4s; }
+  .flower:nth-child(1) {
+    left: 6%;
+    top: 12%;
+    animation-delay: .2s;
+  }
 
+  .flower:nth-child(2) {
+    right: 8%;
+    top: 15%;
+    animation-delay: 1s;
+  }
+
+  .flower:nth-child(3) {
+    left: 12%;
+    bottom: 16%;
+    animation-delay: 1.8s;
+  }
+
+  .flower:nth-child(4) {
+    right: 12%;
+    bottom: 12%;
+    animation-delay: 2.6s;
+  }
+
+  .flower:nth-child(5) {
+    left: 42%;
+    top: 7%;
+    animation-delay: 3.2s;
+  }
+
+  .flower:nth-child(6) {
+    right: 38%;
+    bottom: 8%;
+    animation-delay: 4s;
+  }
+
+  .flower:nth-child(7) {
+    left: 25%;
+    top: 25%;
+    animation-delay: 1.5s;
+  }
+
+  .flower:nth-child(8) {
+    right: 25%;
+    top: 30%;
+    animation-delay: 2.5s;
+  }
+
+  .flower:nth-child(9) {
+    left: 7%;
+    bottom: 35%;
+    animation-delay: 3.5s;
+  }
+
+  /* Main thank-you card */
   .thank-card {
     width: min(92vw, 800px);
     text-align: center;
@@ -153,42 +265,93 @@
     margin-bottom: 20px;
   }
 
+  /* Floating animation */
   @keyframes float {
-    0%,100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(8deg); }
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-15px) rotate(8deg);
+    }
   }
 </style>
 </head>
+
 <body>
 
+<!-- PAGE 1 -->
 <section id="page1" class="page active">
-  <div class="hearts"><span>♡</span><span>♡</span><span>♡</span><span>♡</span></div>
-  <div class="card">
-    <h1>hello madam pretty 🌷</h1>
-    <div class="subtitle">i have a little message for you...</div>
-    <button onclick="showPage('page2')">hello 💗</button>
+
+  <div class="hearts">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
   </div>
+
+  <div class="card">
+
+    <h1>hello madam pretty 🌷</h1>
+
+    <div class="subtitle">
+      i have a little message for you...
+    </div>
+
+    <button onclick="showPage('page2')">
+      hello 💗
+    </button>
+
+  </div>
+
 </section>
 
+
+<!-- PAGE 2 -->
 <section id="page2" class="page">
-  <div class="hearts"><span>✿</span><span>♡</span><span>🌷</span><span>♡</span></div>
+
+  <div class="hearts">
+    <span>✿</span>
+    <span>♡</span>
+    <span>🌷</span>
+    <span>♡</span>
+  </div>
+
   <div class="letter-wrap">
-    <div class="flowers">🌷 🌸 🌷 🌸 🌷</div>
+
+    <div class="flowers">
+      🌷 🌸 🌷 🌸 🌷
+    </div>
+
     <div class="letter">
+
       <p>
         hello madam i just want you to know that i’m really proud of you today.
         you did great. also i just want to say that you’re always pretty if no one
         has said it to you today, and i hope you know how amazing you are.
         keep believing in yourself pretty. you deserve to be proud of yourself too. 🌷
       </p>
+
     </div>
-    <button onclick="showPage('page3')">click me if you wanna thank to me 💗</button>
-    <button class="back" onclick="showPage('page1')">back 💕</button>
+
+    <!-- GO TO PAGE 3 -->
+    <button onclick="showPage('page3')">
+      click me if you wanna thank to me 💗
+    </button>
+
+    <button class="back" onclick="showPage('page1')">
+      back 💕
+    </button>
+
   </div>
+
 </section>
 
 
+<!-- PAGE 3 -->
 <section id="page3" class="page page3">
+
+  <!-- Floating decorations -->
   <div class="flower">🌸</div>
   <div class="flower">🌷</div>
   <div class="flower">🌺</div>
@@ -199,21 +362,52 @@
   <div class="flower">🦋</div>
   <div class="flower">💗</div>
 
+
+  <!-- Main cute card -->
   <div class="thank-card">
-    <div class="sparkles">🌸 ✨ 🌷 ✨ 🌸</div>
-    <div class="cute-decor">🎀 🦋 💕 🧸 🌷 🎀</div>
-    <h2>yay you're welcome always pretty 💗</h2>
-    <div class="cute-decor">💖 🩷 ✨ 🌸 ✨ 🩷 💖</div>
-    <div class="cute-note">with lots of love, sparkles &amp; flowers ♡</div>
+
+    <div class="sparkles">
+      🌸 ✨ 🌷 ✨ 🌸
+    </div>
+
+    <div class="cute-decor">
+      🎀 🦋 💕 🧸 🌷 🎀
+    </div>
+
+    <h2>
+      yay you're welcome always pretty 💗
+    </h2>
+
+    <div class="cute-decor">
+      💖 🩷 ✨ 🌸 ✨ 🩷 💖
+    </div>
+
+    <div class="cute-note">
+      with lots of love, sparkles &amp; flowers ♡
+    </div>
+
   </div>
+
 </section>
 
+
 <script>
+
 function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(
+    p => p.classList.remove('active')
+  );
+
+  // Show selected page
   document.getElementById(id).classList.add('active');
+
+  // Scroll to the top
   window.scrollTo(0, 0);
 }
+
 </script>
+
 </body>
 </html>
